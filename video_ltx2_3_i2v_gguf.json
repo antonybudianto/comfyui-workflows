@@ -67,51 +67,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 273,
-      "type": "SaveVideo",
-      "pos": [
-        376.0918594285771,
-        3287.8643501663
-      ],
-      "size": [
-        1023.5064302390615,
-        1706.3672475185253
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "video",
-          "type": "VIDEO",
-          "link": 610
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65,
-        "cnr_id": "comfy-core",
-        "ver": "0.16.3",
-        "Node name for S&R": "SaveVideo",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.7",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "video/LTX_2.3_i2v",
-        "auto",
-        "auto"
-      ]
-    },
-    {
       "id": 269,
       "type": "LoadImage",
       "pos": [
@@ -158,16 +113,61 @@
         }
       },
       "widgets_values": [
-        "1773278827f1d1.png",
+        "skydive.jpg",
         "image"
+      ]
+    },
+    {
+      "id": 273,
+      "type": "SaveVideo",
+      "pos": [
+        376.0918594285771,
+        3287.8643501663
+      ],
+      "size": [
+        1023.5064302390615,
+        1889.1362529183577
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 610
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "cnr_id": "comfy-core",
+        "ver": "0.16.3",
+        "Node name for S&R": "SaveVideo",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "video/LTX_2.3_i2v",
+        "auto",
+        "auto"
       ]
     },
     {
       "id": 267,
       "type": "b94257db-cdc1-45d3-8913-ca61e782d9c1",
       "pos": [
-        -32.370521476493394,
-        3478.449119136174
+        -39.72354454355024,
+        3484.259589292458
       ],
       "size": [
         400,
@@ -250,14 +250,6 @@
       "properties": {
         "proxyWidgets": [
           [
-            "237",
-            "noise_seed"
-          ],
-          [
-            "237",
-            "control_after_generate"
-          ],
-          [
             "266",
             "value"
           ],
@@ -292,6 +284,14 @@
           [
             "233",
             "model_name"
+          ],
+          [
+            "237",
+            "noise_seed"
+          ],
+          [
+            "237",
+            "control_after_generate"
           ]
         ],
         "enableTabs": false,
@@ -607,7 +607,7 @@
               }
             },
             "widgets_values": [
-              850280894427369,
+              882283545683667,
               "randomize"
             ]
           },
@@ -1365,7 +1365,7 @@
               }
             },
             "widgets_values": [
-              1184,
+              446,
               "fixed"
             ]
           },
@@ -1770,7 +1770,7 @@
               }
             },
             "widgets_values": [
-              896,
+              669,
               "fixed"
             ]
           },
@@ -3083,7 +3083,7 @@
               }
             },
             "widgets_values": [
-              "the scene starts with minimal movement. She is waving her left hand and keep standing still. She keeps same expression during the shot. The swing ride on the top is still on going smoothly."
+              "The woman is skydiving with the guider, with some cloud scenery and cinematic Dubai view"
             ]
           },
           {
@@ -3969,7 +3969,7 @@
   },
   "config": {},
   "extra": {
-    "frontendVersion": "1.41.19",
+    "frontendVersion": "1.41.21",
     "workflowRendererVersion": "LG",
     "prompt": {
       "1": {
@@ -4370,11 +4370,14 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 0.7719688466898886,
+      "scale": 1.3474680150749285,
       "offset": [
-        390.1831242183888,
-        -3308.517291391089
+        684.5541935970961,
+        -3329.4412211476524
       ]
+    },
+    "favoritedWidgets": {
+      "favorites": []
     }
   },
   "version": 0.4
