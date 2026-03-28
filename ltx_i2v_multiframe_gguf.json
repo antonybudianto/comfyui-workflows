@@ -198,36 +198,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 439,
-      "type": "MarkdownNote",
-      "pos": [
-        2680,
-        6180
-      ],
-      "size": [
-        370,
-        320
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "FAQ",
-      "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.7",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "# FAQ\n\n**How do I set the length of the video?**\n\nYou can set the length of the video in the Model Loader Subgraph →\n\n**I keep getting errors when running this workflow!**\n\nDouble check that all of the correct models loaded. This is using the newest version of 2x upscaler (v1.1). You can change it to the older one under the Model Loader.\n\n**Where do I download these models??**\n\nThere is a good list of models and download links here: <https://github.com/wildminder/awesome-ltx2?tab=readme-ov-file>\n\nAlso the latest v1.1 spatial upscaler can be found here: <https://huggingface.co/Lightricks/LTX-2.3/tree/main>\n\nThe tiny vae (taeltx2_3.safetensors) is found here:\n<https://huggingface.co/Kijai/LTX2.3_comfy/blob/main/vae/taeltx2_3.safetensors>\n\n\n\n\n\n\n\n\n"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 7,
       "type": "2979f3eb-1c4c-45ff-8387-f1f4addb72f4",
       "pos": [
@@ -309,7 +279,7 @@
         150
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -326,6 +296,302 @@
       ],
       "color": "#223",
       "bgcolor": "#335"
+    },
+    {
+      "id": 381,
+      "type": "MultiImageLoader",
+      "pos": [
+        3556.2338227044615,
+        5969.348182259893
+      ],
+      "size": [
+        350,
+        530
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "multi_output",
+          "type": "IMAGE",
+          "links": [
+            1046,
+            1047,
+            1048
+          ]
+        },
+        {
+          "name": "image_1",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "image_2",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "image_3",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "image_4",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MultiImageLoader",
+        "cnr_id": "WhatDreamsCost-ComfyUI",
+        "ver": "ecd00e6b404f14b07c7b54b0b0033e8bccb32d24",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "0a.png\n0b.png\n0c.png\n0d.png",
+        0,
+        0,
+        "lanczos",
+        "keep proportion",
+        0,
+        18,
+        ""
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 1,
+      "type": "34d63160-e149-4935-ab1f-892ffe617fec",
+      "pos": [
+        4670,
+        5950
+      ],
+      "size": [
+        244.98828125,
+        114
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "av_latent",
+          "type": "LATENT",
+          "link": 47
+        },
+        {
+          "name": "audio_vae",
+          "type": "VAE",
+          "link": 2
+        },
+        {
+          "label": "video_vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 31
+        },
+        {
+          "label": "Use Optimized Decoding",
+          "name": "value",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "341",
+            "value"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.17.2",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 439,
+      "type": "MarkdownNote",
+      "pos": [
+        2680,
+        6180
+      ],
+      "size": [
+        370,
+        320
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "FAQ",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "# FAQ\n\n**How do I set the length of the video?**\n\nYou can set the length of the video in the Model Loader Subgraph →\n\n**I keep getting errors when running this workflow!**\n\nDouble check that all of the correct models loaded. This is using the newest version of 2x upscaler (v1.1). You can change it to the older one under the Model Loader.\n\n**Where do I download these models??**\n\nThere is a good list of models and download links here: <https://github.com/wildminder/awesome-ltx2?tab=readme-ov-file>\n\nAlso the latest v1.1 spatial upscaler can be found here: <https://huggingface.co/Lightricks/LTX-2.3/tree/main>\n\nThe tiny vae (taeltx2_3.safetensors) is found here:\n<https://huggingface.co/Kijai/LTX2.3_comfy/blob/main/vae/taeltx2_3.safetensors>\n\n\n\n\n\n\n\n\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 10,
+      "type": "958b2c7a-1f75-4a30-84a8-892bddb9e426",
+      "pos": [
+        3080,
+        5950
+      ],
+      "size": [
+        440,
+        550
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Prompt",
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        },
+        {
+          "label": "length (seconds)",
+          "name": "value_1",
+          "type": "INT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "optimized_model",
+          "type": "MODEL",
+          "links": [
+            40
+          ]
+        },
+        {
+          "label": "video_vae",
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            31,
+            45,
+            798
+          ]
+        },
+        {
+          "label": "audio_vae",
+          "name": "VAE_1",
+          "type": "VAE",
+          "links": [
+            2,
+            22
+          ]
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            796
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            797
+          ]
+        },
+        {
+          "label": "length_seconds",
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            21
+          ]
+        },
+        {
+          "label": "noise",
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            44
+          ]
+        },
+        {
+          "label": "2x_spatial_upscale_model",
+          "name": "LATENT_UPSCALE_MODEL",
+          "type": "LATENT_UPSCALE_MODEL",
+          "links": [
+            1037
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "430",
+            "text"
+          ],
+          [
+            "364",
+            "noise_seed"
+          ],
+          [
+            "364",
+            "control_after_generate"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.17.2",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "color": "#222",
+      "bgcolor": "#000"
     },
     {
       "id": 376,
@@ -399,9 +665,9 @@
         "insert_frame_1": 0,
         "strength_1": 1,
         "insert_frame_2": 0,
-        "strength_2": 1,
+        "strength_2": 0.8,
         "insert_frame_3": 0,
-        "strength_3": 1,
+        "strength_3": 0.9,
         "insert_frame_4": 0,
         "strength_4": 1,
         "insert_frame_5": 0,
@@ -500,7 +766,7 @@
         "frame_rate": 24,
         "insert_second_1": 0,
         "insert_second_2": 2,
-        "insert_second_3": 4,
+        "insert_second_3": 3,
         "insert_second_4": 5,
         "insert_second_5": 0,
         "insert_second_6": 0,
@@ -665,10 +931,10 @@
         1,
         0,
         2,
-        1,
+        0.8,
         0,
-        4,
-        1,
+        3,
+        0.9,
         0,
         5,
         1,
@@ -901,272 +1167,6 @@
           [
             "8",
             "use 2x on stage 3"
-          ]
-        ],
-        "cnr_id": "comfy-core",
-        "ver": "0.17.2",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.7",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 10,
-      "type": "958b2c7a-1f75-4a30-84a8-892bddb9e426",
-      "pos": [
-        3080,
-        5950
-      ],
-      "size": [
-        440,
-        550
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "label": "Prompt",
-          "name": "value",
-          "type": "STRING",
-          "widget": {
-            "name": "value"
-          },
-          "link": null
-        },
-        {
-          "label": "length (seconds)",
-          "name": "value_1",
-          "type": "INT",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "optimized_model",
-          "type": "MODEL",
-          "links": [
-            40
-          ]
-        },
-        {
-          "label": "video_vae",
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            31,
-            45,
-            798
-          ]
-        },
-        {
-          "label": "audio_vae",
-          "name": "VAE_1",
-          "type": "VAE",
-          "links": [
-            2,
-            22
-          ]
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "links": [
-            796
-          ]
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "links": [
-            797
-          ]
-        },
-        {
-          "label": "length_seconds",
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            21
-          ]
-        },
-        {
-          "label": "noise",
-          "name": "NOISE",
-          "type": "NOISE",
-          "links": [
-            44
-          ]
-        },
-        {
-          "label": "2x_spatial_upscale_model",
-          "name": "LATENT_UPSCALE_MODEL",
-          "type": "LATENT_UPSCALE_MODEL",
-          "links": [
-            1037
-          ]
-        }
-      ],
-      "properties": {
-        "proxyWidgets": [
-          [
-            "430",
-            "text"
-          ],
-          [
-            "364",
-            "noise_seed"
-          ],
-          [
-            "364",
-            "control_after_generate"
-          ]
-        ],
-        "cnr_id": "comfy-core",
-        "ver": "0.17.2",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.7",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 381,
-      "type": "MultiImageLoader",
-      "pos": [
-        3556.2338227044615,
-        5969.348182259893
-      ],
-      "size": [
-        350,
-        530
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 6,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "multi_output",
-          "type": "IMAGE",
-          "links": [
-            1046,
-            1047,
-            1048
-          ]
-        },
-        {
-          "name": "image_1",
-          "type": "IMAGE",
-          "links": null
-        },
-        {
-          "name": "image_2",
-          "type": "IMAGE",
-          "links": null
-        },
-        {
-          "name": "image_3",
-          "type": "IMAGE",
-          "links": null
-        },
-        {
-          "name": "image_4",
-          "type": "IMAGE",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MultiImageLoader",
-        "cnr_id": "WhatDreamsCost-ComfyUI",
-        "ver": "ecd00e6b404f14b07c7b54b0b0033e8bccb32d24",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.7",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "0a.png\n0b.png\n0c.png\n0d.png",
-        0,
-        0,
-        "lanczos",
-        "keep proportion",
-        0,
-        18,
-        ""
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 1,
-      "type": "34d63160-e149-4935-ab1f-892ffe617fec",
-      "pos": [
-        4670,
-        5950
-      ],
-      "size": [
-        244.98828125,
-        114
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "av_latent",
-          "type": "LATENT",
-          "link": 47
-        },
-        {
-          "name": "audio_vae",
-          "type": "VAE",
-          "link": 2
-        },
-        {
-          "label": "video_vae",
-          "name": "vae",
-          "type": "VAE",
-          "link": 31
-        },
-        {
-          "label": "Use Optimized Decoding",
-          "name": "value",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "value"
-          },
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "VIDEO",
-          "type": "VIDEO",
-          "links": [
-            13
-          ]
-        }
-      ],
-      "properties": {
-        "proxyWidgets": [
-          [
-            "341",
-            "value"
           ]
         ],
         "cnr_id": "comfy-core",
@@ -3058,9 +3058,9 @@
               "insert_frame_1": 0,
               "strength_1": 1,
               "insert_frame_2": 0,
-              "strength_2": 1,
+              "strength_2": 0.8,
               "insert_frame_3": 0,
-              "strength_3": 1,
+              "strength_3": 0.9,
               "insert_frame_4": 0,
               "strength_4": 1,
               "insert_frame_5": 0,
@@ -3159,7 +3159,7 @@
               "frame_rate": 24,
               "insert_second_1": 0,
               "insert_second_2": 2,
-              "insert_second_3": 4,
+              "insert_second_3": 3,
               "insert_second_4": 5,
               "insert_second_5": 0,
               "insert_second_6": 0,
@@ -3324,10 +3324,10 @@
               1,
               0,
               2,
-              1,
+              0.8,
               0,
-              4,
-              1,
+              3,
+              0.9,
               0,
               5,
               1,
@@ -4998,9 +4998,9 @@
               "insert_frame_1": 0,
               "strength_1": 1,
               "insert_frame_2": 0,
-              "strength_2": 1,
+              "strength_2": 0.8,
               "insert_frame_3": 0,
-              "strength_3": 1,
+              "strength_3": 0.9,
               "insert_frame_4": 0,
               "strength_4": 1,
               "insert_frame_5": 0,
@@ -5099,7 +5099,7 @@
               "frame_rate": 24,
               "insert_second_1": 0,
               "insert_second_2": 2,
-              "insert_second_3": 4,
+              "insert_second_3": 3,
               "insert_second_4": 5,
               "insert_second_5": 0,
               "insert_second_6": 0,
@@ -5264,10 +5264,10 @@
               1,
               0,
               2,
-              1,
+              0.8,
               0,
-              4,
-              1,
+              3,
+              0.9,
               0,
               5,
               1,
@@ -5742,47 +5742,6 @@
             "bgcolor": "#000"
           },
           {
-            "id": 333,
-            "type": "LatentUpscaleModelLoader",
-            "pos": [
-              -200,
-              7300
-            ],
-            "size": [
-              330,
-              58
-            ],
-            "flags": {},
-            "order": 1,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-              {
-                "localized_name": "LATENT_UPSCALE_MODEL",
-                "name": "LATENT_UPSCALE_MODEL",
-                "type": "LATENT_UPSCALE_MODEL",
-                "links": [
-                  710
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "LatentUpscaleModelLoader",
-              "cnr_id": "comfy-core",
-              "ver": "0.16.4",
-              "ue_properties": {
-                "widget_ue_connectable": {},
-                "version": "7.7",
-                "input_ue_unconnectable": {}
-              }
-            },
-            "widgets_values": [
-              "ltx-2.3-spatial-upscaler-x1.5-1.0.safetensors"
-            ],
-            "color": "#222",
-            "bgcolor": "#000"
-          },
-          {
             "id": 339,
             "type": "PrimitiveBoolean",
             "pos": [
@@ -5830,6 +5789,47 @@
             },
             "widgets_values": [
               true
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+          },
+          {
+            "id": 333,
+            "type": "LatentUpscaleModelLoader",
+            "pos": [
+              -200,
+              7300
+            ],
+            "size": [
+              330,
+              58
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "LATENT_UPSCALE_MODEL",
+                "name": "LATENT_UPSCALE_MODEL",
+                "type": "LATENT_UPSCALE_MODEL",
+                "links": [
+                  710
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "LatentUpscaleModelLoader",
+              "cnr_id": "comfy-core",
+              "ver": "0.16.4",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.7",
+                "input_ue_unconnectable": {}
+              }
+            },
+            "widgets_values": [
+              "ltx-2.3-spatial-upscaler-x2-1.0.safetensors"
             ],
             "color": "#222",
             "bgcolor": "#000"
@@ -6406,7 +6406,7 @@
               }
             },
             "widgets_values": [
-              "The scene starts by zooming slowly from the clouds into the tokyo cities with tokyo tower as the center"
+              "The scene starts by zooming slowly from the clouds into the tokyo cities with tokyo tower as the center, the clouds are moving smoothly with some white birds passing by the camera cinematically"
             ],
             "color": "#222",
             "bgcolor": "#000"
@@ -6587,8 +6587,8 @@
               }
             },
             "widgets_values": [
-              0,
-              "fixed"
+              426218768083665,
+              "randomize"
             ],
             "color": "#222",
             "bgcolor": "#000"
@@ -6924,47 +6924,6 @@
             "bgcolor": "#000"
           },
           {
-            "id": 419,
-            "type": "LatentUpscaleModelLoader",
-            "pos": [
-              2560,
-              6110
-            ],
-            "size": [
-              330,
-              58
-            ],
-            "flags": {},
-            "order": 8,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-              {
-                "localized_name": "LATENT_UPSCALE_MODEL",
-                "name": "LATENT_UPSCALE_MODEL",
-                "type": "LATENT_UPSCALE_MODEL",
-                "links": [
-                  1034
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "LatentUpscaleModelLoader",
-              "cnr_id": "comfy-core",
-              "ver": "0.16.4",
-              "ue_properties": {
-                "widget_ue_connectable": {},
-                "version": "7.7",
-                "input_ue_unconnectable": {}
-              }
-            },
-            "widgets_values": [
-              "ltx-2.3-spatial-upscaler-x2-1.0.safetensors"
-            ],
-            "color": "#222",
-            "bgcolor": "#000"
-          },
-          {
             "id": 458,
             "type": "UnetLoaderGGUF",
             "pos": [
@@ -6976,7 +6935,7 @@
               58
             ],
             "flags": {},
-            "order": 9,
+            "order": 8,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -7013,7 +6972,7 @@
               102
             ],
             "flags": {},
-            "order": 10,
+            "order": 9,
             "mode": 0,
             "inputs": [
               {
@@ -7048,6 +7007,47 @@
               }
             },
             "widgets_values": [],
+            "color": "#222",
+            "bgcolor": "#000"
+          },
+          {
+            "id": 419,
+            "type": "LatentUpscaleModelLoader",
+            "pos": [
+              2560,
+              6110
+            ],
+            "size": [
+              330,
+              58
+            ],
+            "flags": {},
+            "order": 10,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "LATENT_UPSCALE_MODEL",
+                "name": "LATENT_UPSCALE_MODEL",
+                "type": "LATENT_UPSCALE_MODEL",
+                "links": [
+                  1034
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "LatentUpscaleModelLoader",
+              "cnr_id": "comfy-core",
+              "ver": "0.16.4",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.7",
+                "input_ue_unconnectable": {}
+              }
+            },
+            "widgets_values": [
+              "ltx-2.3-spatial-upscaler-x2-1.0.safetensors"
+            ],
             "color": "#222",
             "bgcolor": "#000"
           }
@@ -7861,118 +7861,6 @@
             "bgcolor": "#335"
           },
           {
-            "id": 8,
-            "type": "535e663f-da59-47c1-aab5-c78ff202cb16",
-            "pos": [
-              4970,
-              5950
-            ],
-            "size": [
-              218.19140625,
-              330.9668884277344
-            ],
-            "flags": {},
-            "order": 3,
-            "mode": 4,
-            "inputs": [
-              {
-                "name": "model",
-                "type": "MODEL",
-                "link": 23
-              },
-              {
-                "name": "positive",
-                "type": "CONDITIONING",
-                "link": 875
-              },
-              {
-                "name": "negative",
-                "type": "CONDITIONING",
-                "link": 876
-              },
-              {
-                "name": "noise",
-                "type": "NOISE",
-                "link": 26
-              },
-              {
-                "label": "video_vae",
-                "name": "vae",
-                "type": "VAE",
-                "link": 33
-              },
-              {
-                "name": "image",
-                "type": "IMAGE",
-                "link": 30
-              },
-              {
-                "label": "video_latent",
-                "name": "samples",
-                "type": "LATENT",
-                "link": 27
-              },
-              {
-                "name": "audio_latent",
-                "type": "LATENT",
-                "link": 1079
-              },
-              {
-                "label": "use 2x on stage 3",
-                "name": "value",
-                "type": "BOOLEAN",
-                "widget": {
-                  "name": "value"
-                },
-                "link": 40
-              },
-              {
-                "name": "multi_input",
-                "type": "IMAGE",
-                "link": 1007
-              },
-              {
-                "label": "2x_upscale_model",
-                "name": "upscale_model",
-                "type": "LATENT_UPSCALE_MODEL",
-                "link": 1039
-              }
-            ],
-            "outputs": [
-              {
-                "label": "video_latent",
-                "name": "output",
-                "type": "LATENT",
-                "links": [
-                  1026
-                ]
-              },
-              {
-                "name": "audio_latent",
-                "type": "LATENT",
-                "links": []
-              }
-            ],
-            "properties": {
-              "proxyWidgets": [
-                [
-                  "339",
-                  "value"
-                ]
-              ],
-              "cnr_id": "comfy-core",
-              "ver": "0.17.2",
-              "ue_properties": {
-                "widget_ue_connectable": {},
-                "version": "7.7",
-                "input_ue_unconnectable": {}
-              }
-            },
-            "widgets_values": [],
-            "color": "#222",
-            "bgcolor": "#000"
-          },
-          {
             "id": 6,
             "type": "ce8f7842-cb03-41b4-9b1e-8d032b2a4e72",
             "pos": [
@@ -8075,6 +7963,118 @@
             ],
             "properties": {
               "proxyWidgets": [],
+              "cnr_id": "comfy-core",
+              "ver": "0.17.2",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.7",
+                "input_ue_unconnectable": {}
+              }
+            },
+            "widgets_values": [],
+            "color": "#222",
+            "bgcolor": "#000"
+          },
+          {
+            "id": 8,
+            "type": "535e663f-da59-47c1-aab5-c78ff202cb16",
+            "pos": [
+              4970,
+              5950
+            ],
+            "size": [
+              218.19140625,
+              330.9668884277344
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+              {
+                "name": "model",
+                "type": "MODEL",
+                "link": 23
+              },
+              {
+                "name": "positive",
+                "type": "CONDITIONING",
+                "link": 875
+              },
+              {
+                "name": "negative",
+                "type": "CONDITIONING",
+                "link": 876
+              },
+              {
+                "name": "noise",
+                "type": "NOISE",
+                "link": 26
+              },
+              {
+                "label": "video_vae",
+                "name": "vae",
+                "type": "VAE",
+                "link": 33
+              },
+              {
+                "name": "image",
+                "type": "IMAGE",
+                "link": 30
+              },
+              {
+                "label": "video_latent",
+                "name": "samples",
+                "type": "LATENT",
+                "link": 27
+              },
+              {
+                "name": "audio_latent",
+                "type": "LATENT",
+                "link": 1079
+              },
+              {
+                "label": "use 2x on stage 3",
+                "name": "value",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "value"
+                },
+                "link": 40
+              },
+              {
+                "name": "multi_input",
+                "type": "IMAGE",
+                "link": 1007
+              },
+              {
+                "label": "2x_upscale_model",
+                "name": "upscale_model",
+                "type": "LATENT_UPSCALE_MODEL",
+                "link": 1039
+              }
+            ],
+            "outputs": [
+              {
+                "label": "video_latent",
+                "name": "output",
+                "type": "LATENT",
+                "links": [
+                  1026
+                ]
+              },
+              {
+                "name": "audio_latent",
+                "type": "LATENT",
+                "links": []
+              }
+            ],
+            "properties": {
+              "proxyWidgets": [
+                [
+                  "339",
+                  "value"
+                ]
+              ],
               "cnr_id": "comfy-core",
               "ver": "0.17.2",
               "ue_properties": {
@@ -8366,10 +8366,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 0.8848430409155968,
+      "scale": 1.0818730626116995,
       "offset": [
-        -2559.1893978683465,
-        -5435.171771345906
+        -3487.508304266436,
+        -5698.500835069859
       ]
     }
   },
